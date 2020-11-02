@@ -23,7 +23,7 @@ function main()
 	
 
 	if h[ 'file' ][ 'size' ] > 4000000
-		?? hb_jsonencode( { 'success' => lSuccess, 'msg' => 'Max size exceded: ' +   ltrim(str(h[ 'file' ][ 'size' ])) } )
+		?? hb_jsonencode( { 'success' => lSuccess, 'msg' => 'Max size exceded: ' +   hb_ntos(h[ 'file' ][ 'size' ]) } )
 		retu nil
 	endif
 	

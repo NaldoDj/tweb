@@ -41,7 +41,7 @@ METHOD Activate() CLASS TWebSwitch
 		cChecked := 'checked'
 	ENDIF	
 
-	cHtml := '<div class="col-' + ltrim(str(::nGrid)) + ' custom-control custom-switch tweb_switch' + IF( ::oParent:lDessign, ' tweb_dessign', '')  + '" ' + IF( ::oParent:lDessign, 'style="border:1px solid blue;"', '' )   + ' >'
+	cHtml := '<div class="col-' + hb_ntos(::nGrid) + ' custom-control custom-switch tweb_switch' + IF( ::oParent:lDessign, ' tweb_dessign', '')  + '" ' + IF( ::oParent:lDessign, 'style="border:1px solid blue;"', '' )   + ' >'
 	cHtml += '<input type="checkbox" class="custom-control-input" id="' + ::cId + '" name="' + ::cId + '" ' + cChecked 
 	cHtml += ' onclick="' + ::cAction + '" ' 
 	cHtml += '>' 

@@ -69,7 +69,7 @@ METHOD Activate() CLASS TWebGetNumber
 			cBtnSize 	:= 'btn-lg'
 	ENDCASE	
 
-	cHtml := '<div class="col-' + ltrim(str(::nGrid)) 
+	cHtml := '<div class="col-' + hb_ntos(::nGrid)
 
 	cHtml += IF( ::oParent:lDessign, ' tweb_dessign', '') 		
 	cHtml += '" '

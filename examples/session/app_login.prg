@@ -8,7 +8,7 @@ function main()
 
 	DEFINE WEB oWeb TITLE 'App' INIT
 
-    DEFINE FORM o ACTION 'app_srv_login'
+    DEFINE FORM o ACTION 'app_srv_login.prg'
 
 	INIT FORM o  
 

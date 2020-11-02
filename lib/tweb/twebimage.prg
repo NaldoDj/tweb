@@ -56,7 +56,7 @@ METHOD Activate() CLASS TWebImage
 		CASE upper(::oParent:cSizing) == 'LG' ;	cSize 		:= 'form-control-lg'			
 	ENDCASE	
 
-	cHtml := '<div class="col-' + ltrim(str(::nGrid)) 
+	cHtml := '<div class="col-' + hb_ntos(::nGrid)
 	
 	cHtml += IF( ::oParent:lDessign, ' tweb_dessign', '') 
 	cHtml += ' tweb_image' 
@@ -103,7 +103,7 @@ METHOD Activate() CLASS TWebImage
 	cHtml += '<img id="' + ::cId + '" src="' + ::cSrc + '" class="rounded " '
 	
 	if ::nWidth > 0
-		cHtml += ' style="width:' + ltrim(str(::nWidth)) + 'px; '
+		cHtml += ' style="width:' + hb_ntos(::nWidth) + 'px; '
 	endif
 		
 	cHtml += ' alt="...">'

@@ -84,7 +84,7 @@ METHOD Activate() CLASS TWebButton
 		::cName := ::cId
 	ENDIF
 
-	cHtml += '<div class="col-' + ltrim(str(::nGrid)) 
+	cHtml += '<div class="col-' + hb_ntos(::nGrid)
 	cHtml += IF( ::oParent:lDessign, ' tweb_dessign', '')  
 	
 	do case
@@ -119,7 +119,7 @@ METHOD Activate() CLASS TWebButton
 
 	/*
 	if ::nGrid > 0
-		cHtml += ' col-' + ltrim(str(::nGrid))
+		cHtml += ' col-' + hb_ntos(::nGrid)
 	endif
 	*/
 	

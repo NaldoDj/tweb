@@ -98,7 +98,7 @@ METHOD Activate() CLASS TWebFolder
 	//retu valtochar( ::APrompts )
 	
 	
-	cHtml += '<div class="col-' + ltrim(str(::nGrid)) + ' tweb_folder" >'	
+	cHtml += '<div class="col-' + hb_ntos(::nGrid) + ' tweb_folder" >'	
 	
 		cHtml += '<ul class="nav nav-tabs border-0">'	
 		

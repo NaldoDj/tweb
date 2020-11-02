@@ -58,7 +58,7 @@ METHOD Activate() CLASS TWebFont
 	endif	
 	
 	if ::nSize > 0
-		cHtml += 'font-size: ' + ltrim(str( ::nSize )) + 'px  !important;'
+		cHtml += 'font-size: ' + hb_ntos( ::nSize ) + 'px  !important;'
 	endif	
 	
 	if ::lBold

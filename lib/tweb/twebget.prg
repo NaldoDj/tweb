@@ -89,7 +89,7 @@ METHOD Activate() CLASS TWebGet
 			cBtnSize 	:= 'btn-lg'
 	ENDCASE	
 
-	cHtml := '<div class="col-' + ltrim(str(::nGrid)) 
+	cHtml := '<div class="col-' + hb_ntos(::nGrid)
 	//cHtml += ' col-form-label ' 
 	cHtml += IF( ::oParent:lDessign, ' tweb_dessign', '') 		
 	cHtml += '" '

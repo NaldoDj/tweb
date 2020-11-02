@@ -182,7 +182,7 @@ function Parameter( uValue )
 				if uValue > 0  .and. uValue <= len( aParam )
 					retu aParam[ uValue ]
 				else
-					retu '*** Index error ' + ltrim(str(uValue)) + ' ***'
+					retu '*** Index error ' + hb_ntos(uValue) + ' ***'
 				endif
 			
 			endif

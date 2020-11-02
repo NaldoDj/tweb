@@ -53,12 +53,12 @@ METHOD Activate() CLASS TWebRadio
 		cChecked := ''
 	//ENDIF	
 
-	cHtml := '<div class="col-' + ltrim(str(::nGrid)) + ' custom-control " ' + IF( ::lDessign, 'style="border:1px solid blue;"', '' )   + ' >'
+	cHtml := '<div class="col-' + hb_ntos(::nGrid) + ' custom-control " ' + IF( ::lDessign, 'style="border:1px solid blue;"', '' )   + ' >'
 	
 	FOR nI := 1 TO len( ::aItems )
 	
 		cHtml += '<div class="custom-control custom-radio ' + IF( ::lInline, 'custom-control-inline', '' ) + '">'
-		cHtml += '	<input type="radio" class="custom-control-input tweb_pointer" id="' + ::cId + '_' + ltrim(str(ni)) + '" name="' +  ::cId  + '" value="' +  ::aValues[nI] + '" ' + IF( ::lDisabled, 'disabled', '' )
+		cHtml += '	<input type="radio" class="custom-control-input tweb_pointer" id="' + ::cId + '_' + hb_ntos(ni) + '" name="' +  ::cId  + '" value="' +  ::aValues[nI] + '" ' + IF( ::lDisabled, 'disabled', '' )
 		cHtml += ' 	onchange="' + ::cAction + '"  >' 
 		cHtml += '	<label class="custom-control-label tweb_pointer '
 		
@@ -72,7 +72,7 @@ METHOD Activate() CLASS TWebRadio
 
 			cHtml += '" '		
 
-		cHtml += '	for="'  + ::cId + '_' + ltrim(str(ni)) + '" >' + ::aItems[nI] + '</label>' 
+		cHtml += '	for="'  + ::cId + '_' + hb_ntos(ni) + '" >' + ::aItems[nI] + '</label>' 
 		cHtml += '</div>' 
 		
 	NEXT	

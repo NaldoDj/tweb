@@ -146,7 +146,7 @@ function TWeblogfile() ; retu TWebGlobal( 'path_log' ) + '/log' + dtos(date()) +
 function _l( uValue )
 
 	local cFile 	:= TWeblogfile()
-	local cInfo   	:= time() + ' ' + procname(1) + '(' +  ltrim(str(procline( 1 ))) + ')'	
+	local cInfo   	:= time() + ' ' + procname(1) + '(' +  hb_ntos(procline( 1 )) + ')'	
 	LOCAL cLine, hFile	
 
 	//	Si no hay parámetros borramos el fichero 

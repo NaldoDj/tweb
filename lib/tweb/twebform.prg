@@ -88,9 +88,9 @@ METHOD Col( nCol, cType, cClass ) CLASS TWebForm
 	DEFAULT nCol TO 12
 
 	//	Si ponemos e- -sm, responsive y pone 1 debajo de otro...
-	//::Html ( '<div class="col-sm-' + ltrim(str(nCol)) + '"' + IF( ::lDessign, 'style="border:1px solid blue;"', '' ) + '>' )	
+	//::Html ( '<div class="col-sm-' + hb_ntos(nCol) + '"' + IF( ::lDessign, 'style="border:1px solid blue;"', '' ) + '>' )	
 	
-	cHtml := '<div class="col-' + cPrefix + ltrim(str(nCol)) 
+	cHtml := '<div class="col-' + cPrefix + hb_ntos(nCol)
 	
 	if !empty( cClass )
 		cHtml += ' ' + cClass
@@ -100,7 +100,7 @@ METHOD Col( nCol, cType, cClass ) CLASS TWebForm
 	
 	cHtml += '>'
 	
-	//::Html ( '<div class="col-' + cPrefix + ltrim(str(nCol)) + '"' + IF( ::lDessign, 'style="border:1px solid blue;"', '' ) + '>' )
+	//::Html ( '<div class="col-' + cPrefix + hb_ntos(nCol) + '"' + IF( ::lDessign, 'style="border:1px solid blue;"', '' ) + '>' )
 	::Html ( cHtml )
 	
 RETU NIL
@@ -248,7 +248,7 @@ METHOD Caption( cTitle, nGrid ) CLASS TWebForm
 	DEFAULT cTitle TO ''
 	DEFAULT nGrid TO 12
 	
-	cHtml := '<div class="col-' + ltrim(str(nGrid)) + '">'
+	cHtml := '<div class="col-' + hb_ntos(nGrid) + '">'
 	
 	cHtml += '<small>' + cTitle + '</small>'
 	cHtml += '</div>'
@@ -278,7 +278,7 @@ METHOD Small( cId, cText, nGrid  ) CLASS TWebForm
 	DEFAULT cText 	TO ''
 	DEFAULT nGrid 	TO 6
 	
-	cHtml := '<div class="col-' + ltrim(str(nGrid)) + IF( ::lDessign, ' tweb_dessign', '')  + '" ' + IF( ::lDessign, 'style="border:1px solid blue;"', '' )   + ' >'
+	cHtml := '<div class="col-' + hb_ntos(nGrid) + IF( ::lDessign, ' tweb_dessign', '')  + '" ' + IF( ::lDessign, 'style="border:1px solid blue;"', '' )   + ' >'
 	
 	cHtml += '<small id="' + cId + '" class="text-muted">'	
 	cHtml += cText

@@ -49,10 +49,10 @@ METHOD Activate() CLASS TWebBox
 	ELSE
 		cPrefix := IF( empty(::cType), '', ::cType + '-' )
 	ENDIF	
-	//cHtml += '<div class="col-' + cPrefix + ltrim(str(::nGrid)) 		
+	//cHtml += '<div class="col-' + cPrefix + hb_ntos(::nGrid)
 	*/
 	
-	cHtml += '<div class="col-' + ltrim(str(::nGrid)) 		
+	cHtml += '<div class="col-' + hb_ntos(::nGrid)
 	
 	
 	//cHtml += IF( ::oParent:lDessign, ' tweb_dessign', '') 
@@ -68,7 +68,7 @@ METHOD Activate() CLASS TWebBox
 		if !empty( ::nHeight )
 			if valtype( ::nHeight) == 'N'
 				if ::nHeight > 0
-					cHtml += 'height:' + ltrim(str(::nHeight)) + 'px;'
+					cHtml += 'height:' + hb_ntos(::nHeight) + 'px;'
 				endif	
 			else
 				cHtml += 'height:' + ::nHeight + ';'	//	don't work

@@ -17,7 +17,7 @@ function main()
 		
 	//	Redirijo
 	
-		Redirect( 'app_menu' )			
+		Redirect( 'app_menu.prg' )			
 		
 	else
 	

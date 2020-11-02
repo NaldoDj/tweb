@@ -13,7 +13,7 @@
 function main()
 
 	local cPath 	:= hb_getenv( 'PRGPATH' ) + '/upload/'
-	local cFile 	:= 'photo_' + ltrim(str(hb_milliseconds())) + '.jpg'
+	local cFile 	:= 'photo_' + hb_ntos(hb_milliseconds()) + '.jpg'
 	local h 		:= GetMsgUpload()	
 	local lSuccess 	:= .f.	
 	

@@ -58,7 +58,7 @@ METHOD Activate() CLASS TWebGetMemo
 		CASE upper(::oParent:cSizing) == 'LG' ; cSize := 'form-control-lg'
 	ENDCASE	
 
-	cHtml := '<div class="col-' + ltrim(str(::nGrid)) + IF( ::oParent:lDessign, ' tweb_dessign', '') + '" ' + IF( ::oParent:lDessign, 'style="border:1px solid blue;"', '' )   + ' >'
+	cHtml := '<div class="col-' + hb_ntos(::nGrid) + IF( ::oParent:lDessign, ' tweb_dessign', '') + '" ' + IF( ::oParent:lDessign, 'style="border:1px solid blue;"', '' )   + ' >'
 	
 	IF !empty( ::cLabel )
 	
@@ -76,7 +76,7 @@ METHOD Activate() CLASS TWebGetMemo
 			cHtml += ' ' + ::cFont
 		endif					
 	
-	cHtml += '" rows="' + ltrim(str(::nRows)) + '" '
+	cHtml += '" rows="' + hb_ntos(::nRows) + '" '
 	cHtml += 'id="' + ::cId + '"	 name="' + ::cId + '" ' 
 	//cHtml += 'placeholder="' + ::cPlaceHolder + '" ' 
 	

@@ -87,7 +87,7 @@ METHOD Activate() CLASS TWebSelect
 		CASE upper(::oParent:cSizing) == 'LG' ; cSize := 'form-control-lg'
 	ENDCASE		
 
-	cHtml := '<div class="col-' + ltrim(str(::nGrid)) + IF( ::oParent:lDessign, ' tweb_dessign', '') + '" ' + IF( ::oParent:lDessign, 'style="border:1px solid blue;"', '' )   + ' >'
+	cHtml := '<div class="col-' + hb_ntos(::nGrid) + IF( ::oParent:lDessign, ' tweb_dessign', '') + '" ' + IF( ::oParent:lDessign, 'style="border:1px solid blue;"', '' )   + ' >'
 
 	IF !empty( ::cLabel )
 	
@@ -97,8 +97,8 @@ METHOD Activate() CLASS TWebSelect
 	
 	cHtml += '<div class="input-group">'	
 	
-	//cHtml += '<select class="col-' + ltrim(str(::nGrid)) + ' custom-select form-control ' + cSize + '" id="' + ::cId + '" onchange="' + ::cAction + '" >'
-	//cHtml += '<select class="col-' + ltrim(str(::nGrid)) + ' form-control ' + cSize + IF( ::oParent:lDessign, ' tweb_dessign', '')  + '" ' + IF( ::oParent:lDessign, 'style="border:1px solid blue;"', '' ) + ' id="' + ::cId + '" onchange="' + ::cAction + '" >'
+	//cHtml += '<select class="col-' + hb_ntos(::nGrid) + ' custom-select form-control ' + cSize + '" id="' + ::cId + '" onchange="' + ::cAction + '" >'
+	//cHtml += '<select class="col-' + hb_ntos(::nGrid) + ' form-control ' + cSize + IF( ::oParent:lDessign, ' tweb_dessign', '')  + '" ' + IF( ::oParent:lDessign, 'style="border:1px solid blue;"', '' ) + ' id="' + ::cId + '" onchange="' + ::cAction + '" >'
 	cHtml += '<select class="col-12 form-control ' + cSize + IF( ::oParent:lDessign, ' tweb_dessign', '') 
 
 	

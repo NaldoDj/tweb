@@ -21,7 +21,7 @@ function main()
 	
 	WHILE (cAlias)->first = cSearch .and. (cAlias)->( !Eof() )
 	
-		Aadd( aRows, {  'id' => ltrim(str((cAlias)->( Recno() ))),;
+		Aadd( aRows, {  'id' => hb_ntos((cAlias)->( Recno() )),;
 						'value' => Alltrim((cAlias)->first)  + ' ' + Alltrim((cAlias)->last),;
 						'street' => Alltrim((cAlias)->street),;
 						'city' => Alltrim((cAlias)->city ),;
